@@ -10,6 +10,7 @@ const types = {
 
 let typeCoercion = document.getElementById("type-coercion")
 
+// looping through object to add all possible data types
 for (let key1 in types) {
   for (let key2 in types) {
     const value1 = types[key1];
