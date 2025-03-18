@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitwise Operators</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div id="bitwise-calculator">
+        <h1>Bitwise Calculator App</h1>
+        <div id="input-container">
+            <input type="number" placeholder="enter value 1" id="value1">
+            <input type="number" placeholder="enter value 2" id="value2">
+        </div>
+        <div id="button-container">
+            <button onclick="bitwiseAnd()">& - AND</button>
+            <button onclick="bitwiseOr()">| - OR</button>
+            <button onclick="bitwiseXor()">^ - XOR</button>
+            <button onclick="bitwiseNot()">~ - NOT (value 1)</button>
+            <button onclick="bitwiseLeftShift()">&lt;&lt; - Left Shift</button>
+            <button onclick="bitwiseRightShift()">&gt;&gt; - Right Shift</button>
+        </div>
+        <div id="result">output : -------</div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
