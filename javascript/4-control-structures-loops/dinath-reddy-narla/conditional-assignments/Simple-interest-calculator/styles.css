@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+}
+
+#interest-calculator{
+    width: 400px;
+    height: 250px;
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid;
+    background-color:lightblue;
+}
+
+input{
+    font-size: 1rem;
+}
+button{
+    padding: 1%;
+    font-size: 1rem;
+}
+
+#result{
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+
