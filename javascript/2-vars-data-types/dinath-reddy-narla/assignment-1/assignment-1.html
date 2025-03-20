@@ -13,12 +13,12 @@
     </script>
 </head>
 <body>
-    <div id="internal"></div>
-    <div id="external"></div>
-    <div id="inline">click the button to load inline script</div>
+    <p id="internal"></p>
+    <p id="external"></p>
+    <p id="inline">click the button to load inline script</p>
     <!-- Inline Script -->
     <button onclick="document.getElementById('inline').innerText = 'This is from inline script'">click</button>
 
-    <script src="./assignment-1.js"></script>
+    <script src="./assignment-1.js" defer></script>
 </body>
 </html>
