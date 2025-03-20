@@ -48,13 +48,3 @@ function modulous(){
     value1 %= value2
     result.innerHTML = `output : ${value1}`    
 }
-
-function increment(){
-    let {value1} = getInputs("value1");
-    result.innerHTML = `output : ${++value1}`
-}
-
-function decrement(){
-    let {value1} = getInputs("value1");
-    result.innerHTML = `output : ${--value1}`
-}
