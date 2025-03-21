@@ -1,0 +1,7 @@
+div {
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid black;
+}
+#parent { background-color: lightblue; }
+#child { background-color: lightgreen; }

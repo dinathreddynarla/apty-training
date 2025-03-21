@@ -1,0 +1,22 @@
+.error {
+  color: red;
+  font-size: 15px;
+}
+.valid {
+  border: 2px solid green;
+}
+.invalid {
+  border: 2px solid red;
+}
+
+form {
+  width: 300px;
+  margin: auto;
+}
+
+input, button {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}

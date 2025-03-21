@@ -1,0 +1,8 @@
+div {
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid black;
+}
+#level1 { background-color: lightblue; }
+#level2 { background-color: lightgreen; }
+#level3 { background-color: lightcoral; }
