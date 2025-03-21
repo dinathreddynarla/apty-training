@@ -1,4 +1,4 @@
-
+//function to calculate Perimeter and Area
 function calculate(length=10, breadth=5){
     let perimeter = 2*(length*breadth)
     function Area(){
@@ -21,7 +21,4 @@ document.getElementById("rectangle").addEventListener('submit' ,(e)=>{
     }
     let {perimeter , area } = calculate(length,breadth)
     document.getElementById("result").innerText = `Perimeter is ${perimeter} and Area is ${area}`
-
-    
-
 })

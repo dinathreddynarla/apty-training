@@ -13,9 +13,10 @@ document.getElementById("calculate").addEventListener('click' ,()=>{
         document.getElementById("result").innerText = `please fill the input with numbers separated by comma`
         return;
     }
-    
-    // checkfor isNaN because if a empty string is converted to number gives NaN l
-    // ike for 1,2, for after last , it gives one space as one value which coverts to NaN after parseInt
+
+    // Check for isNaN because if an empty string is converted to a number, it gives NaN.
+    // For example, in '1,2,' after the last comma, it treats the empty space as a value,
+    // which converts to NaN after parseInt.
     numberArray = numberArray.map(num => !isNaN(parseInt(num)) ? parseInt(num): 0)
     console.log(numberArray);
     document.getElementById("result").innerText = `Sum is ${getSum(...numberArray)}`
