@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessing and Manipulating Elements with Shadow DOM</title>
+</head>
+<body>
+    <h2>Accessing and Manipulating Elements with Shadow DOM</h2>
+    
+    <!-- This will be the host for the Shadow DOM -->
+    <div id="shadow-host"></div>
+
+    <!-- Buttons outside of Shadow DOM -->
+    <button onclick="changeBgColor('paraClass')">Change Bg color</button>
+    <button onclick="changeSpan()">Add text to span</button>
+    <button onclick="toggleInput()">Toggle input</button>
+    <button onclick="addCustom()">Add Custom Attribute</button>
+
+    <script src="./script.js"></script>
+</body>
+</html>

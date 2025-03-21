@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessing and Manipulating Elements</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <h1>Accessing and Manipulating Elements</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>className</th>
+                <th>tag</th>
+                <th>name</th>
+                <th>attribute</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <p id="para1">This is paragraph 1.</p>
+                    <button onclick="changeColor('para1')">Change Color</button>
+                </td>
+                <td>
+                    <p class="paraClass">This is paragraph class 1</p>
+                </td>
+                <td><span></span></td>
+                <td><input type="text" name="input1"></td>
+                <td><p custom-attr="custom-attr-1">This is custom paragraph 1</p></td>
+            </tr>
+            <tr>
+                <td>
+                    <p id="para2">This is paragraph 2.</p>
+                    <button onclick="changeColor('para2')">Change Color</button>
+                </td>
+                <td>
+                    <p class="paraClass">This is paragraph class 2</p>
+                </td>
+                <td><span></span></td>
+                <td><input type="text" name="input2"></td>
+                <td><p custom-attr="custom-attr-2">This is custom paragraph 1</p></td>
+                
+            </tr>
+            <tr>
+                <td>
+                    <p id="para3">This is paragraph 3.</p>
+                    <button onclick="changeColor('para3')">Change Color</button>
+                </td>
+                <td>
+                    <p class="paraClass">This is paragraph class 3</p>
+                </td>
+                <td><span></span></td>
+                <td><input type="text" name="input3"></td>
+                <td><p custom-attr="custom-attr-3">This is custom paragraph 1</p></td>
+                
+            </tr>
+        </tbody>
+    </table>
+    <br><br>
+    <button onclick="changeBgColor('paraClass')">Change Bg color</button>
+    <button onclick="changeSpan()">Add text to span</button>
+    <button onclick="toggleInput()">Toggle input</button>
+    <button onclick="addCustom()">Add Custom Attribute</button>
+
+    <script src="./script.js"></script>
+
+</body>
+</html>
