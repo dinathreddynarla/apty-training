@@ -12,12 +12,16 @@ function findLargest(){
     value2 = Number(value2)
     value3 = Number(value3)
 
-    if((value1 > value2) && (value1 > value3)){
-        result.innerText = `Largest Number is ${value1}`    
-    }else if((value2 > value1) && (value2 > value3)){
-        result.innerText = `Largest Number is ${value2}`   
-    }else{
-        result.innerText = `Largest Number is ${value3}`
+    let largest = value1; //assuming value1 is largest
+
+    if (value2 > largest) {
+        largest = value2;
     }
+    if (value3 > largest) {
+        largest = value3;
+    }
+    
+    result.innerText = `Largest Number is ${largest}`;
+    
     return;
 }

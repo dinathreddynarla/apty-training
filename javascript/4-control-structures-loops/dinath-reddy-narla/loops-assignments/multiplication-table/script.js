@@ -12,18 +12,15 @@ function generateTable() {
     }
 
     // Create a table for the multiplication results
-    let tableHTMl = "<table border='1' style='border-collapse: collapse;'>";
-    tableHTMl += "<tr><th>Multiplication</th><th>Result</th></tr>";
+    let tableHTML = "<table border='1' style='border-collapse: collapse;'>";
+    tableHTML += "<tr><th>Multiplication</th><th>Result</th></tr>";
 
     // Loop to generate the multiplication table
     for (let i = 1; i <= 10; i++) {
-        tableHTMl += `<tr><td>${number} x ${i}</td><td>${number * i}</td></tr>`;
+        tableHTML += `<tr><td>${number} x ${i}</td><td>${number * i}</td></tr>`;
     }
 
-    tableHTMl += "</table>";
+    tableHTML += "</table>";
 
-    result.innerHTML = tableHTMl;
-
-    console.log(result);
-    
+    result.innerHTML = tableHTML;
 }

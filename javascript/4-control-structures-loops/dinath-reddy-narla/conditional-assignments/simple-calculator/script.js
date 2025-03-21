@@ -20,9 +20,11 @@ function calculate(operator){
             return result.innerText = `Output : ${value1 / value2}`
         case 'mod':
             return result.innerText = `Output : ${value1 % value2}`
+        default:
+            return result.innerText = `Error : Operator mismatch`
 
     }
-    return;
+
 }
 
 document.getElementById('calculate').addEventListener('click',()=>{
