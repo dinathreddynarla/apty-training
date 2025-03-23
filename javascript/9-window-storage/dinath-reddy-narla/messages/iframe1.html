@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iframe1</title>
+</head>
+<body>
+    <h2>iframe1</h2>
+
+    <button id="sendMessageToIframe2">Send Message to iframe2</button>
+
+    <script>
+        const sendMessageButton = document.getElementById('sendMessageToIframe2');
+
+        // Sending message to iframe2 when the button is clicked
+        sendMessageButton.addEventListener('click', () => {
+            const iframe2 = window.parent.document.getElementById('iframe2');
+            const message = 'Hello from iframe1 to iframe2!';
+            iframe2.contentWindow.postMessage(message, '*'); // Send message to iframe2
+        });
+    </script>
+</body>
+</html>

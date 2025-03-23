@@ -1,0 +1,22 @@
+
+.container {
+  margin-bottom: 10px;
+}
+.timer-container {
+  display: flex;
+  justify-content: space-between;
+}
+button {
+  padding: 6px;
+  font-size: 12px;
+  cursor: pointer;
+  margin: 2px;
+}
+input {
+  padding: 5px;
+  font-size: 12px;
+  width: 50px;
+}
+  #countdown , #stopwatch {
+    font-size: 1.4em;
+  }
