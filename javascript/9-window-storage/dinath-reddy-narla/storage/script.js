@@ -23,9 +23,9 @@ window.onload = function () {
     }
   }
   function displayStorageData() {
-    const localData = localStorage.getItem("localData") || "No data";
-    const sessionData = sessionStorage.getItem("sessionData") || "No data";
+    const localStorageData = localStorage.getItem("localData") || "No data";
+    const sessionStorageData = sessionStorage.getItem("sessionData") || "No data";
   
-    document.getElementById("localStorageData").textContent = localData;
-    document.getElementById("sessionStorageData").textContent = sessionData;
+    document.getElementById("localStorageData").textContent = localStorageData;
+    document.getElementById("sessionStorageData").textContent = sessionStorageData;
   }
