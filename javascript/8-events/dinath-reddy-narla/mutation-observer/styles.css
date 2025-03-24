@@ -1,0 +1,19 @@
+.editable-div {
+    border: 1px solid #ccc;
+    padding: 10px;
+    display: inline-block;
+    cursor: pointer;
+  }
+  .editable-div .pencil-icon {
+    right: 5px;
+    top: 5px;
+    cursor: pointer;
+  }
+  .editable-div textarea {
+    width: 100%;
+    height: 100%;
+    border: none;
+    padding: 5px;
+    resize: none;
+    font-size: 14px;
+  }
