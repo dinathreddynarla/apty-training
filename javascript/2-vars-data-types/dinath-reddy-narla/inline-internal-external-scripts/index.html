@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inline, Internal, External scripts</title>
+    <script>
+      //Internal Script
+      document.addEventListener("DOMContentLoaded",()=>{
+        let internalContainer = document.getElementById("internal");
+        internalContainer.innerText = "This is from internal script";
+      });
+    </script>
+  </head>
+  <body>
+    <p id="internal"></p>
+    <p id="external"></p>
+    <p id="inline">click the button to load inline script</p>
+    <!-- Inline Script -->
+    <button onclick="document.getElementById('inline').innerText = 'This is from inline script'">click</button>
+
+    <script src="./script.js" defer></script>
+  </body>
+</html>
