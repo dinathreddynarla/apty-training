@@ -22,11 +22,6 @@ body{
     align-items: center;
 }
 
-/* #input-container{
-    font-size: 1rem;
-    width: 45%;
-} */
-
 #button-container{
     width: 80%;
     display: flex;
