@@ -1,31 +1,23 @@
 function sumAndAverage() {
-    let input = document.getElementById('number').value.trim();
-    let numberArray = input.split(',');
-    let result = document.getElementById("result");
-    console.log(numberArray);
-    
-    // Check if the input is empty
-    if (input === "") {
-        result.innerText = "Error: input should not be empty";
-        return;
-    }
+  let result = document.getElementById("result");
+  let input = document.getElementById("number").value;
+  if (input === "") {
+    result.innerText = "Error: input should not be empty";
+    return;
+  }
+  let numberArray = input
+    .split(",")
+    .filter((num) => num.trim() != "" && !isNaN(Number(num.trim())))
+    .map((num) => Number(num.trim()));
 
-    let sum = 0;
-    
-    // check for each element in the array to check if it's a valid number
+  let sum = 0;
+  if (numberArray.length == 0) {
+    result.innerText = "Error: No valid numbers entered";
+  } else {
     for (let number of numberArray) {
-        if(number.trim() == '') continue; // Number('') is returning 0 that won't affect sum but affects average
-        let num = Number(number.trim());  // Convert to number and trim spaces
-       console.log(num);
-       
-        if (isNaN(num)) {
-            result.innerText = "Error: input contains invalid non-numeric values";
-            return;
-        } else {
-            sum += num;
-        }
+      sum += number;
     }
-
     let average = sum / numberArray.length;
     result.innerText = `The Sum is ${sum} and Average is ${average}`;
+  }
 }
