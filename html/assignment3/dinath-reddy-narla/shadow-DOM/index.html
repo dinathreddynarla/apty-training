@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Component using Shadow DOM</title>
+    <style>
+      p {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="host">
+      <template shadowrootmode="open">
+        <p>Hi , I'm in Shadow DOM</p>
+      </template>
+    </div>
+    <p>Hi , I'm not in Shadow DOM</p>
+  </body>
+</html>
