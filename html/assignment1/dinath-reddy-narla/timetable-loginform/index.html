@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Time Table and Login Form</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <h2>Class Time Table</h2>
+    <table>
+      <tr>
+        <th>Day & Time</th>
+        <th>9:00 - 11:00</th>
+        <th>11:00 - 13:00</th>
+        <th>Break</th>
+        <th>14:00 - 16:00</th>
+        <th>16:00 - 18:00</th>
+      </tr>
+      <tr>
+        <th>Monday</th>
+        <td>Maths</td>
+        <td>Physics</td>
+        <td rowspan="5">Lunch Break</td>
+        <td>Chemistry</td>
+        <td>Chemistry Lab</td>
+      </tr>
+      <tr>
+        <th>TuesDay</th>
+        <td>Chemistry</td>
+        <td>Maths</td>
+        <td>Physics</td>
+        <td>Physics Lab</td>
+      </tr>
+      <tr>
+        <th>WednesDay</th>
+        <td>Maths</td>
+        <td>Physics</td>
+        <td>Chemistry</td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>ThursDay</th>
+        <td>Maths</td>
+        <td>Physics</td>
+        <td>Chemistry</td>
+        <td>Chemistry Lab</td>
+      </tr>
+      <tr>
+        <th>FriDay</th>
+        <td>Chemistry</td>
+        <td>Maths</td>
+        <td>Physics</td>
+        <td>Physics Lab</td>
+      </tr>
+    </table>
+    <h2>Login Form</h2>
+    <form>
+      <label for="username">Username : </label>
+      <input type="text" id="username" placeholder="Enter username" />
+      <label for="password">Password : </label>
+      <input type="password" id="password" placeholder="Enter password" />
+      <button type="submit">Login</button>
+    </form>
+  </body>
+</html>
