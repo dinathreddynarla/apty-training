@@ -34,6 +34,10 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
+        .header {
+            flex-direction: column;
+        }
+
         .container iframe {
             width: 100%;
             height: 100vh;
@@ -44,6 +48,11 @@
             flex: 1;
             min-width: 300px;
             margin: 10px;
+        }
+
+        details .content {
+            padding-left: 15px;
+            margin-top: 5px;
         }
 
         h2 {
@@ -89,30 +98,466 @@
     <div class="container">
         <div class="header">
             <div class="topics">
+                <h1>Topics</h1>
                 <h3>Introduction to CSS</h3>
-                <ul>
-                    <li>What is CSS?</li>
-                    <li>How CSS works with HTML</li>
-                    <li>Different ways to apply CSS: Inline, Internal, External</li>
-                </ul>
+                <details>
+                    <summary>What is CSS?</summary>
+                    <div class="content">
+                        <p>CSS stands for <strong>Cascading Style Sheets</strong>. It’s a language used to style and
+                            design the layout of
+                            web pages. While HTML
+                            is used to create the structure of a webpage (like headings, paragraphs, images, etc.), CSS
+                            controls how those
+                            elements look on the page, including things like:</p>
+                        <ul>
+                            <li><strong>Colors</strong> (backgrounds, text, borders, etc.)</li>
+                            <li><strong>Fonts</strong> (font size, family, weight, etc.)</li>
+                            <li><strong>Spacing</strong> (margins, padding, line height, etc.)</li>
+                            <li><strong>Layout</strong> (positioning, alignment, display properties)</li>
+                            <li><strong>Animations and transitions</strong> (like hover effects or smooth scrolling)
+                            </li>
+                        </ul>
+                    </div>
+                </details>
+                <details>
+                    <summary>How CSS works with HTML</summary>
+                    <div class="content">
+                        <p><strong>CSS works by selecting HTML elements and applying styles to them.</strong> The process involves
+                            defining rules that specify how the content in HTML should be displayed. Here's how it works step-by-step:
+                        </p>
+                
+                        <ol>
+                            <li><strong>HTML Structure:</strong> HTML provides the content and structure of the web page (e.g.,
+                                headings, paragraphs, images, etc.).</li>
+                            <li><strong>CSS Selectors:</strong> In CSS, you define rules using selectors to target specific HTML
+                                elements. These selectors can be based on:
+                                <ul>
+                                    <li><strong>Element type:</strong> (e.g., <code>p</code>, <code>h1</code>)</li>
+                                    <li><strong>Class:</strong> (e.g., <code>.class-name</code>)</li>
+                                    <li><strong>ID:</strong> (e.g., <code>#id-name</code>)</li>
+                                </ul>
+                            </li>
+                            <li><strong>CSS Properties:</strong> After selecting an element, CSS defines the properties (such as
+                                <code>color</code>, <code>font-size</code>, <code>margin</code>, <code>padding</code>,
+                                <code>background</code>, etc.) that determine how the element should be displayed.</li>
+                            <li><strong>Cascading:</strong> The "Cascading" part means that CSS rules can overlap. If multiple rules
+                                apply to the same element, the browser decides which one to apply based on:
+                                <ul>
+                                    <li><strong>Specificity:</strong> More specific selectors take precedence over general ones.</li>
+                                    <li><strong>Source order:</strong> If two rules have the same specificity, the one that appears last
+                                        in the CSS file will be applied.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Rendering:</strong> The browser interprets the HTML and CSS, combining them to render the styled
+                                content on the screen. The result is the visually styled page that the user interacts with.</li>
+                        </ol>
+                    </div>
+                </details>
+                </details>
+                <details>
+                    <summary>Different ways to apply CSS: Inline, Internal, External</summary>
+                    <div class="content">
+                        <p>There are three main ways to apply CSS to an HTML document: </p>
+                        <ol>
+                            <li><strong>Inline CSS:</strong> Directly inside the HTML element using the
+                                <code>style</code>
+                                attribute.
+                                <pre>
+    &lt;h1 style="color: red;"&gt;This is a red heading using Inline CSS&lt;/h1&gt;
+                          </pre>
+                            </li>
+
+                            <li><strong>Internal CSS:</strong> Within a <code>&lt;style&gt;</code> block in the
+                                <code>head</code> section of the HTML document.
+                                <pre>
+    &lt;style&gt;
+        h1 {
+        color: red; /* Applying the red color to the h1 element */
+        }
+    &lt;/style&gt;
+    &lt;h1&gt;This is a red heading using Internal CSS&lt;/h1&gt;
+                          </pre>
+                            </li>
+
+                            <li><strong>External CSS:</strong> Using a separate .css file linked to the HTML document.
+                                <pre>
+    &lt;link rel="stylesheet" href="styles.css"&gt;
+    &lt;h1&gt;This is a red heading using External CSS&lt;/h1&gt;
+            </pre>
+                                <pre>
+    /* In styles.css */
+    h1 {
+        color: red; /* Applying the red color to the h1 element */
+    }
+                          </pre>
+                            </li>
+                        </ol>
+                    </div>
+                </details>
 
                 <h3>CSS Syntax and Selectors</h3>
-                <ul>
-                    <li>CSS syntax: <code>selector { property: value; }</code></li>
-                    <li>Types of selectors: Element, Class, ID, Universal, Grouping</li>
-                </ul>
+                <details>
+                    <summary> CSS syntax: <code>selector { property: value; }</code></summary>
+                    <div class="content">
+                        <p>This is the basic structure of a CSS rule. It consists of three parts:</p>
+                        <ul>
+                            <li><strong>Selector</strong>: This part defines the HTML element you want to apply the
+                                style to. Example:
+                                <code>p</code>, <code>div</code>, or any class like <code>.myClass</code>.
+                            </li>
+                            <li><strong>Property</strong>: The property is the CSS attribute you want to change. For
+                                example,
+                                <code>color</code>, <code>font-size</code>, <code>margin</code>, etc.
+                            </li>
+                            <li><strong>Value</strong>: The value specifies what you want the property to be. For
+                                example,
+                                <code>red</code>, <code>16px</code>, or <code>auto</code>.
+                            </li>
+                        </ul>
+                        <p><strong>Example:</strong> The rule <code>p { color: red; }</code> applies the color red to
+                            all paragraph
+                            elements (<code>p</code>) in the HTML document.</p>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>Types of Selectors</summary>
+                    <div class="content">
+                        <details>
+                            <summary>Simple Selectors</summary>
+                            <div class="content">
+                                <ul>
+                                    <li><strong>1. Element Selector:</strong> Selects elements by their tag name.</li>
+                                    <pre><code>p { color: red; }</code></pre>
+                                    <p>This will select all <code>&lt;p&gt;</code> elements and change their color to
+                                        red.</p>
+
+                                    <li><strong>2. Class Selector:</strong> Selects elements with a specific class.</li>
+                                    <pre><code>.myClass { color: blue; }</code></pre>
+                                    <p>This will select all elements with the class <code>myClass</code> and change
+                                        their text color to blue.</p>
+
+                                    <li><strong>3. ID Selector:</strong> Selects an element with a specific ID.</li>
+                                    <pre><code>#myId { font-size: 20px; }</code></pre>
+                                    <p>This will target the element with <code>id="myId"</code> and set its font size to
+                                        20px.</p>
+
+                                    <li><strong>4. Grouping Selectors:</strong> Allows you to apply the same style to
+                                        multiple selectors by separating them with a comma.</li>
+                                    <pre><code>h1, h2, p { color: purple; }</code></pre>
+                                    <p>This will apply the <code>color: purple;</code> style to <code>&lt;h1&gt;</code>,
+                                        <code>&lt;h2&gt;</code>, and <code>&lt;p&gt;</code> elements.
+                                    </p>
+
+                                    <pre><code>.button, #submit { background-color: blue; }</code></pre>
+                                    <p>This will apply the <code>background-color: blue;</code> style to elements with
+                                        the class <code>button</code> and the ID <code>submit</code>.</p>
+                                </ul>
+                            </div>
+                        </details>
+
+                        <details>
+                            <summary>Combinator Selectors</summary>
+                            <div class="content">
+                                <ul>
+                                    <li><strong>1. Child Selector:</strong> Selects direct children of an element.</li>
+                                    <pre><code>div > p { color: green; }</code></pre>
+                                    <p>This will select all <code>&lt;p&gt;</code> elements that are direct children of
+                                        a <code>&lt;div&gt;</code> element.</p>
+
+                                    <li><strong>2. Descendant Selector:</strong> Selects all descendants of an element.
+                                    </li>
+                                    <pre><code>div p { color: orange; }</code></pre>
+                                    <p>This will select all <code>&lt;p&gt;</code> elements inside a
+                                        <code>&lt;div&gt;</code>, even if they are deeply nested.
+                                    </p>
+
+                                    <li><strong>3. Adjacent Sibling Selector:</strong> Selects the element immediately
+                                        following a specific element.</li>
+                                    <pre><code>h1 + p { color: purple; }</code></pre>
+                                    <p>This will select the first <code>&lt;p&gt;</code> element that directly follows
+                                        an <code>&lt;h1&gt;</code> element.</p>
+
+                                    <li><strong>4. General Sibling Selector:</strong> Selects all sibling elements that
+                                        follow a specific element.</li>
+                                    <pre><code>h1 ~ p { color: pink; }</code></pre>
+                                    <p>This will select all <code>&lt;p&gt;</code> elements that are siblings of an
+                                        <code>&lt;h1&gt;</code> element.
+                                    </p>
+                                </ul>
+                            </div>
+                        </details>
+
+                        <details>
+                            <summary>Pseudo-class Selectors</summary>
+                            <div class="content">
+                                <ul>
+                                    <li><strong>1. :hover:</strong> Selects elements when the user hovers over them.
+                                    </li>
+                                    <pre><code>a:hover { color: red; }</code></pre>
+                                    <p>This will change the color of a link to red when hovered over.</p>
+
+                                    <li><strong>2. :focus:</strong> Selects elements when they are focused (e.g.,
+                                        clicked or tabbed into).</li>
+                                    <pre><code>input:focus { border: 2px solid blue; }</code></pre>
+                                    <p>This will add a blue border to the input field when it is focused.</p>
+
+                                    <li><strong>3. :nth-child(n):</strong> Selects elements based on their position in a
+                                        parent.</li>
+                                    <pre><code>li:nth-child(odd) { background-color: lightgray; }</code></pre>
+                                    <p>This will select all odd-numbered <code>&lt;li&gt;</code> elements and give them
+                                        a light gray background.</p>
+
+                                    <li><strong>4. :first-child:</strong> Selects the first child element of a parent.
+                                    </li>
+                                    <pre><code>p:first-child { font-weight: bold; }</code></pre>
+                                    <p>This will make the first <code>&lt;p&gt;</code> element inside its parent bold.
+                                    </p>
+
+                                    <li><strong>5. :last-child:</strong> Selects the last child element of a parent.
+                                    </li>
+                                    <pre><code>p:last-child { margin-bottom: 0; }</code></pre>
+                                    <p>This will remove the margin from the last <code>&lt;p&gt;</code> element inside a
+                                        parent.</p>
+                                </ul>
+                            </div>
+                        </details>
+
+                        <details>
+                            <summary>Pseudo-element Selectors</summary>
+                            <div class="content">
+                                <ul>
+                                    <li><strong>1. ::before:</strong> Inserts content before an element's content.</li>
+                                    <pre><code>p::before { content: "Note: "; font-weight: bold; }</code></pre>
+                                    <p>This will add the word "Note: " before each paragraph's text.</p>
+
+                                    <li><strong>2. ::after:</strong> Inserts content after an element's content.</li>
+                                    <pre><code>p::after { content: "."; }</code></pre>
+                                    <p>This will add a period after each paragraph's text.</p>
+
+                                    <li><strong>3. ::first-letter:</strong> Targets the first letter of an element's
+                                        content.</li>
+                                    <pre><code>p::first-letter { font-size: 2em; color: red; }</code></pre>
+                                    <p>This will make the first letter of each paragraph larger and red.</p>
+
+                                    <li><strong>4. ::first-line:</strong> Targets the first line of text in an element.
+                                    </li>
+                                    <pre><code>p::first-line { font-weight: bold; }</code></pre>
+                                    <p>This will make the first line of each paragraph bold.</p>
+                                </ul>
+                            </div>
+                        </details>
+
+                        <details>
+                            <summary>Attribute Selectors</summary>
+                            <div class="content">
+                                <ul>
+                                    <li><strong>1. Basic Attribute Selector:</strong> Selects elements that have a
+                                        specific attribute.</li>
+                                    <pre><code>a[href] { color: green; }</code></pre>
+                                    <p>This will select all <code>&lt;a&gt;</code> elements with the <code>href</code>
+                                        attribute and make their text color green.</p>
+
+                                    <li><strong>2. Exact Attribute Value:</strong> Selects elements with a specific
+                                        attribute value.</li>
+                                    <pre><code>input[type="text"] { background-color: yellow; }</code></pre>
+                                    <p>This will select all <code>&lt;input&gt;</code> elements of type "text" and
+                                        change their background color to yellow.</p>
+
+                                    <li><strong>3. Starts With:</strong> Selects elements whose attribute value starts
+                                        with a given string.</li>
+                                    <pre><code>a[href^="https://"] { color: blue; }</code></pre>
+                                    <p>This will select all links that start with "https://" and change their text color
+                                        to blue.</p>
+
+                                    <li><strong>4. Ends With:</strong> Selects elements whose attribute value ends with
+                                        a given string.</li>
+                                    <pre><code>img[src$=".jpg"] { border: 1px solid black; }</code></pre>
+                                    <p>This will select all images with a `.jpg` file extension and add a black border.
+                                    </p>
+
+                                    <li><strong>5. Contains:</strong> Selects elements whose attribute value contains a
+                                        given substring.</li>
+                                    <pre><code>a[href*="example"] { text-decoration: underline; }</code></pre>
+                                    <p>This will select all links whose <code>href</code> contains "example" and
+                                        underline the text.</p>
+                                </ul>
+                            </div>
+                        </details>
+                    </div>
+                </details>
 
                 <h3>Basic Styling</h3>
-                <ul>
-                    <li>Styling text: <code>color</code>, <code>font-family</code>, <code>font-size</code></li>
-                    <li>Styling background: <code>background-color</code>, <code>background-image</code></li>
-                    <li>Box Model: Content, Padding, Border, Margin</li>
-                </ul>
+                <details>
+                    <summary>Styling text: <code>color</code>, <code>font-family</code>, <code>font-size</code>,
+                        <code>font-weight</code> etc..</summary>
+                    <div class="content">
+                        <p><strong>1. Color:</strong> The <code>color</code> property sets the color of the text.</p>
+                        <pre><code>p { color: red; }</code></pre>
+                        <p>This will set the color of the text inside all <code>&lt;p&gt;</code> elements to red.</p>
 
+                        <p><strong>2. Font-family:</strong> The <code>font-family</code> property defines which font
+                            should be used for the text.</p>
+                        <pre><code>p { font-family: Arial, sans-serif; }</code></pre>
+                        <p>This will apply the font "Arial" to all <code>&lt;p&gt;</code> elements. If "Arial" is
+                            unavailable, it will fall back to a generic sans-serif font.</p>
+
+                        <p><strong>3. Font-size:</strong> The <code>font-size</code> property controls the size of the
+                            text.</p>
+                        <pre><code>p { font-size: 16px; }</code></pre>
+                        <p>This will set the font size of the text in <code>&lt;p&gt;</code> elements to 16 pixels.</p>
+
+                        <p><strong>4. Font-weight:</strong> The <code>font-weight</code> property specifies the weight
+                            of the font (boldness).</p>
+                        <pre><code>p { font-weight: bold; }</code></pre>
+                        <p>This will make the text in all <code>&lt;p&gt;</code> elements bold.</p>
+
+                        <p><strong>5. Font-style:</strong> The <code>font-style</code> property specifies the style of
+                            the font, such as italic or normal.</p>
+                        <pre><code>p { font-style: italic; }</code></pre>
+                        <p>This will set the text in all <code>&lt;p&gt;</code> elements to italic.</p>
+
+                        <p><strong>6. Text-transform:</strong> The <code>text-transform</code> property controls the
+                            capitalization of the text.</p>
+                        <pre><code>p { text-transform: uppercase; }</code></pre>
+                        <p>This will make all text inside the <code>&lt;p&gt;</code> elements uppercase.</p>
+
+                        <p><strong>7. Letter-spacing:</strong> The <code>letter-spacing</code> property controls the
+                            space between characters.</p>
+                        <pre><code>p { letter-spacing: 2px; }</code></pre>
+                        <p>This will add 2 pixels of space between each character in the text inside
+                            <code>&lt;p&gt;</code> elements.</p>
+
+                        <p><strong>8. Line-height:</strong> The <code>line-height</code> property controls the amount of
+                            space between lines of text.</p>
+                        <pre><code>p { line-height: 1.5; }</code></pre>
+                        <p>This will set the line height of the text in <code>&lt;p&gt;</code> elements to 1.5 times the
+                            size of the font, giving more space between lines.</p>
+
+                        <p><strong>9. Text-align:</strong> The <code>text-align</code> property sets the alignment of
+                            the text inside an element.</p>
+                        <pre><code>p { text-align: center; }</code></pre>
+                        <p>This will center-align the text inside all <code>&lt;p&gt;</code> elements.</p>
+
+                        <p><strong>10. Text-decoration:</strong> The <code>text-decoration</code> property adds
+                            decoration to the text, like underline, line-through, or overline.</p>
+                        <pre><code>p { text-decoration: underline; }</code></pre>
+                        <p>This will underline the text inside all <code>&lt;p&gt;</code> elements.</p>
+                        <p><strong>11. Text-direction:</strong> The <code>direction</code> property sets the direction of text within an
+                            element. It is commonly used for handling text in languages that are written from right to left (like Arabic or
+                            Hebrew).</p>
+                        <pre><code>p { direction: rtl; }</code></pre>
+                        <p>This will set the text direction to right-to-left (rtl) for all <code>&lt;p&gt;</code> elements. By default, text
+                            flows left-to-right (ltr) in most languages.</p>
+                        
+                        <p><strong>12. Text-shadow:</strong> The <code>text-shadow</code> property adds shadow effects to text, making it stand
+                            out and adding depth to the text.</p>
+                        <pre><code>p { text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); }</code></pre>
+                        <p>This will apply a shadow to the text inside all <code>&lt;p&gt;</code> elements, with a 2px horizontal and 2px
+                            vertical offset, a 4px blur radius, and a semi-transparent black color.</p>
+
+                    </div>
+                </details>
+
+                <details>
+                    <summary>Styling background: <code>background-color</code>, <code>background-image</code> etc...</summary>
+                    <div class="content">
+                        <p><strong>1. Background-color:</strong> The <code>background-color</code> property sets the background color of
+                            an element.</p>
+                        <pre><code>div { background-color: lightblue; }</code></pre>
+                        <p>This will set the background color of all <code>&lt;div&gt;</code> elements to light blue.</p>
+                
+                        <p><strong>2. Background-image:</strong> The <code>background-image</code> property allows you to set an image
+                            as the background.</p>
+                        <pre><code>div { background-image: url('background.jpg'); }</code></pre>
+                        <p>This will set the background image of all <code>&lt;div&gt;</code> elements to the image located at
+                            'background.jpg'.</p>
+                
+                        <p><strong>3. Background-position:</strong> The <code>background-position</code> property defines the position
+                            of the background image.</p>
+                        <pre><code>div { background-position: center center; }</code></pre>
+                        <p>This will position the background image at the center of the <code>&lt;div&gt;</code> element.</p>
+                        <p>You can also use values like <code>top</code>, <code>bottom</code>, <code>left</code>, <code>right</code>, or
+                            percentages for precise positioning.</p>
+                
+                        <p><strong>4. Background-size:</strong> The <code>background-size</code> property specifies the size of the
+                            background image.</p>
+                        <pre><code>div { background-size: cover; }</code></pre>
+                        <p>This will make the background image cover the entire <code>&lt;div&gt;</code> element while maintaining its
+                            aspect ratio.</p>
+                        <p>Other values include <code>contain</code> to fit the image inside the element without cropping it.</p>
+                
+                        <p><strong>5. Background-repeat:</strong> The <code>background-repeat</code> property defines whether and how
+                            the background image repeats.</p>
+                        <pre><code>div { background-repeat: no-repeat; }</code></pre>
+                        <p>This will prevent the background image from repeating inside the <code>&lt;div&gt;</code> element.</p>
+                        <p>Other values include <code>repeat</code> (default), <code>repeat-x</code> (repeats horizontally), and
+                            <code>repeat-y</code> (repeats vertically).</p>
+                
+                        <p><strong>6. Background-attachment:</strong> The <code>background-attachment</code> property controls whether
+                            the background image scrolls with the page or stays fixed in place.</p>
+                        <pre><code>div { background-attachment: fixed; }</code></pre>
+                        <p>This will keep the background image fixed in place when scrolling the page.</p>
+                        <p>Other values include <code>scroll</code> (default, the image scrolls with the content) and <code>local</code>
+                            (the image scrolls with the content inside the element).</p>
+                
+                        <p><strong>7. Background (Shorthand):</strong> The <code>background</code> property is a shorthand that allows
+                            you to set multiple background properties in one line.</p>
+                        <pre><code>div { background: lightblue url('background.jpg') no-repeat center center / cover fixed; }</code></pre>
+                        <p>This combines the following properties:
+                        <ul>
+                            <li><code>background-color</code>: lightblue</li>
+                            <li><code>background-image</code>: url('background.jpg')</li>
+                            <li><code>background-repeat</code>: no-repeat</li>
+                            <li><code>background-position</code>: center center</li>
+                            <li><code>background-size</code>: cover</li>
+                            <li><code>background-attachment</code>: fixed</li>
+                        </ul>
+                        </p>
+                    </div>
+                </details>
                 <h3>Box Model and Layout</h3>
-                <ul>
-                    <li>Understanding how padding, margin, and borders affect layout</li>
-                </ul>
+                <details>
+                    <summary>Box Model: Understanding how padding, margin, and borders affect layout</summary>
+                    <div class="content">
+                        <p>The Box Model in CSS refers to the structure of an element and how content, padding, border,
+                            and margin work together:</p>
+                        <p>The Box Model is crucial for understanding how elements occupy space on a webpage. It consists of the
+                            following parts:</p>
+                        <ul>
+                            <li><strong>Content</strong></li>
+                            <li><strong>Padding</strong></li>
+                            <li><strong>Border</strong></li>
+                            <li><strong>Margin</strong></li>
+                        </ul>
+                        <h4>Box Model Layout</h4>
+                        <img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/CSS-Box-Model.png" width="350px"
+                            alt="Visual representation of the CSS box model" />
+                        <p>The image above shows how the padding, border, and margin affect an element's total size and layout.</p>
+                
+                        <p><strong>1. Content:</strong> The actual content of the element, where text or other content
+                            appears.</p>
+                        <pre><code>div { width: 200px; height: 100px; }</code></pre>
+                        <p>The content area can have defined width and height, and it is where the content of the
+                            element, like text or images, is placed.</p>
+                
+                        <p><strong>2. Padding:</strong> Padding is the space between the content and the border of the
+                            element. It is used to create space inside the element.</p>
+                        <pre><code>div { padding: 20px; }</code></pre>
+                        <p>This will create a 20-pixel space inside the <code>&lt;div&gt;</code> element between its
+                            content and the border.</p>
+                
+                        <p><strong>3. Border:</strong> The border wraps around the content and padding. You can set its
+                            thickness, style, and color.</p>
+                        <pre><code>div { border: 2px solid black; }</code></pre>
+                        <p>This will add a 2-pixel black border around the <code>&lt;div&gt;</code> element.</p>
+                
+                        <p><strong>4. Margin:</strong> Margin is the space outside the element, between the element's
+                            border and other elements.</p>
+                        <pre><code>div { margin: 10px; }</code></pre>
+                        <p>This will create a 10-pixel space outside the <code>&lt;div&gt;</code> element.</p>
+                    </div>
+                </details>
             </div>
             <div class="assignments">
                 <h2>Assignments</h2>
