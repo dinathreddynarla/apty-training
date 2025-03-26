@@ -1,0 +1,100 @@
+body {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+div {
+  margin: 50px;
+  padding: 20px;
+  font-size: 24px;
+  background-color: #85db34;
+  color: #000;
+  border-radius: 10px;
+}
+
+.fade {
+  animation: fadeIn 3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.slide {
+  animation: slideIn 3s ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.scale {
+  animation: scaleIn 3s ease-in-out;
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.5);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.rotate {
+  animation: rotateIn 3s ease-in-out;
+}
+
+@keyframes rotateIn {
+  from {
+    transform: rotate(-360deg);
+  }
+  to {
+    transform: rotate(0);
+  }
+}
+
+.bounce {
+  animation: bounceIn 3s ease-in-out;
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: translateY(-1000px);
+  }
+  60% {
+    transform: translateY(30px);
+  }
+  80% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  div {
+    font-size: 16px;
+    margin: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  div {
+    font-size: 14px;
+    margin: 10px;
+  }
+}
