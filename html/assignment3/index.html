@@ -1,183 +1,537 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTML Training Topics</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            background-color: #f4f4f9;
-        }
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+        background-color: #f4f4f9;
+      }
 
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 20px;
-            text-align: center;
-        }
+      header {
+        background-color: #333;
+        color: #fff;
+        padding: 10px 20px;
+        text-align: center;
+      }
+      ul {
+        margin-top: 2%;
+        margin-bottom: 2%;
+      }
+      .container {
+        max-width: 1200px;
+        margin: 20px auto;
+        padding: 20px;
+        background: #fff;
+      }
 
-        .container {
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 20px;
-            background: #fff;
-        }
+      .container .header {
+        display: flex;
+        flex-wrap: wrap;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
 
-        .container .header {
-            display: flex;
-            flex-wrap: wrap;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
+      .container iframe {
+        width: 100%;
+        height: 100vh;;
+      }
 
-        .container iframe {
-            width: 100%;
-            height: 100vh;
-        }
+      .topics,
+      .assignments {
+        flex: 1;
+        min-width: 300px;
+        margin: 10px;
+      }
 
-        .topics, .assignments {
-            flex: 1;
-            min-width: 300px;
-            margin: 10px;
-        }
+      h2 {
+        color: #333;
+        border-bottom: 2px solid #f4f4f9;
+        padding-bottom: 5px;
+      }
 
-        h2 {
-            color: #333;
-            border-bottom: 2px solid #f4f4f9;
-            padding-bottom: 5px;
-        }
+      /*
+      ul {
+        padding: 0;
+        margin: 10px 0;
+        list-style: none;
+      }
 
-        ul {
-            padding: 0;
-            margin: 10px 0;
-            list-style: none;
-        }
+      ul li {
+        padding: 5px 0;
+      }
 
-        ul li {
-            padding: 5px 0;
-        }
-
-        ul li::before {
-            content: "•";
-            color: #333;
-            font-weight: bold;
-            display: inline-block;
-            width: 20px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 10px;
-            background: #333;
-            color: #fff;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-        }
+      ul li::before {
+        content: "•";
+        color: #333;
+        font-weight: bold;
+        display: inline-block;
+        width: 20px;
+      }
+*/
+      footer {
+        text-align: center;
+        padding: 10px;
+        background: #333;
+        color: #fff;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h1>HTML Training Topics and Assignment3</h1>
+      <h1>HTML Training Topics and Assignment3</h1>
     </header>
     <div class="container">
-        <div class="header">
-            <div class="topics">
-                <h2>Topics</h2>
+      <div class="header">
+        <div class="topics">
+          <h2>Topics</h2>
+          <details>
+            <summary>
+              Using <code>&lt;iframe&gt;</code> to Embed Content
+            </summary>
+            <ul>
+              <li>
+                <strong>Overview</strong>: The <code>src</code> attribute
+                specifies the embedded content’s URL, <code>width</code> and
+                <code>height</code> define dimensions, and
+                <code>loading</code> improves performance by deferring iframe
+                loading.
+              </li>
+              <br />
+              <li>
+                <strong>Explanation</strong>:
                 <ul>
-                    <li>Using <code>&lt;iframe&gt;</code> to embed content</li>
-                    <li>Attributes: <code>sandbox</code>, <code>allow</code>, <code>srcdoc</code></li>
-                    <li>Shadow DOM: encapsulation and styling</li>
-                    <li>Using <code>&lt;template&gt;</code> for reusable content</li>
+                  <li>
+                    <strong>Specify Content with <code>src</code></strong
+                    >:
+                    <ul>
+                      <li>Defines the source URL of the embedded page.</li>
+                      <li>
+                        Supports embedding websites, videos, maps, or documents.
+                      </li>
+                      <li>
+                        <strong>Example</strong>:
+                        <code
+                          >&lt;iframe
+                          src="https://example.com"&gt;&lt;/iframe&gt;</code
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <strong
+                      >Adjust Size with <code>width</code> and
+                      <code>height</code></strong
+                    >:
+                    <ul>
+                      <li>
+                        Defines the iframe's display size in pixels or
+                        percentages.
+                      </li>
+                      <li>
+                        Responsive design benefits from percentage-based
+                        dimensions.
+                      </li>
+                      <li>
+                        <strong>Example</strong>:
+                        <code
+                          >&lt;iframe src="https://example.com" width="600"
+                          height="400"&gt;&lt;/iframe&gt;</code
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <strong
+                      >Improve Performance with <code>loading</code></strong
+                    >:
+                    <ul>
+                      <li>
+                        Delays loading until needed (<code>lazy</code>) or loads
+                        immediately (<code>eager</code>).
+                      </li>
+                      <li>
+                        Enhances page speed by deferring non-essential iframes.
+                      </li>
+                      <li>
+                        <strong>Example</strong>:
+                        <code
+                          >&lt;iframe src="https://example.com"
+                          loading="lazy"&gt;&lt;/iframe&gt;</code
+                        >
+                      </li>
+                    </ul>
+                  </li>
                 </ul>
-            </div>
-            <div class="assignments">
-                <h2>Assignments</h2>
+              </li>
+            </ul>
+          </details>
+          <details>
+            <summary>
+              Attributes: <code>sandbox</code>, <code>allow</code>,
+              <code>srcdoc</code>
+            </summary>
+
+            <ul>
+              <li>
+                <strong>Overview</strong>: The sandbox attribute restricts
+                iframe actions for security, allow grants specific permissions
+                (e.g., camera, fullscreen), and srcdoc lets you embed inline
+                HTML instead of an external source.
+              </li>
+              <br />
+              <li>
+                <strong>Explanation</strong>:
                 <ul>
-                    <li>Embed a YouTube video and a map into a webpage using iframes.</li>
-                    <li>Create a custom component using Shadow DOM and <code>&lt;template&gt;</code>.</li>
+                  <li>
+                    <strong>Enable <code>sandbox</code> for Security</strong>:
+                    <ul>
+                      <li>
+                        Restricts embedded content from running scripts or
+                        accessing sensitive data.
+                      </li>
+                      <li>
+                        <strong>Example</strong>:
+                        <code
+                          >&lt;iframe src="https://example.com"
+                          sandbox="allow-scripts
+                          allow-same-origin"&gt;&lt;/iframe&gt;</code
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <strong>Restrict Permissions with <code>allow</code></strong
+                    >:
+                    <ul>
+                      <li>
+                        Controls features the embedded content can access.
+                      </li>
+                      <ul>
+                        <li><strong>geolocation</strong> – Allows the iframe to access the user’s location (useful for maps and delivery apps).</li>
+                        <li><strong>camera</strong> – Enables video input, essential for video calls and AR applications.</li>
+                        <li><strong>microphone</strong> – Allows audio input, required for voice recording and online meetings.</li>
+                        <li><strong>fullscreen</strong> – Enables the iframe content to enter fullscreen mode (useful for videos and games).</li>
+                        <li><strong>encrypted-media</strong> – Required for playing DRM-protected media (Netflix, YouTube, etc.).</li>
+                        <li><strong>autoplay</strong> – Allows media (audio/video) to play automatically without user interaction.</li>
+                        <li><strong>payment</strong> – Enables integration with browser-based payment APIs (e-commerce transactions).</li>
+                        <li><strong>publickey-credentials-get</strong> – Needed for passwordless authentication (WebAuthn, security keys).</li>
+                        <li><strong>usb</strong> – Allows communication with USB devices (e.g., POS systems, hardware wallets).</li>
+                        <li><strong>screen-wake-lock</strong> – Prevents the screen from dimming or locking (ideal for video calls and presentations).</li>
+                    </ul>
+                    
+                      <li>
+                        <strong>Example</strong>:
+                        <code
+                          >&lt;iframe src="https://example.com"
+                          allow="fullscreen"&gt;&lt;/iframe&gt;</code
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <strong
+                      >Use <code>srcdoc</code> for Inline HTML Content</strong
+                    >:
+                    <ul>
+                      <li>
+                        Allows embedding HTML directly inside an iframe without
+                        requiring an external source.
+                      </li>
+                      <li>
+                        Useful for rendering small, self-contained HTML
+                        snippets.
+                      </li>
+                      <li>
+                        <strong>Example</strong>:
+                        <code
+                          >&lt;iframe srcdoc="&lt;h1&gt;Hello,
+                          World!&lt;/h1&gt;&lt;p&gt;This is embedded
+                          content.&lt;/p&gt;" width="400"
+                          height="200"&gt;&lt;/iframe&gt;</code
+                        >
+                      </li>
+                    </ul>
+                  </li>
                 </ul>
-            </div>
+              </li>
+            </ul>
+          </details>
+          <details>
+            <summary>Shadow DOM: encapsulation and styling</summary>
+
+            <ul>
+              <li>
+                <strong>Overview</strong>: The <code>Shadow DOM</code> enables
+                encapsulation of HTML, CSS, and JavaScript, preventing styles
+                and scripts from leaking or interfering with the main document.
+              </li>
+              <br />
+              <li>
+                <strong>Explanation</strong>:
+                <ul>
+                  <li>
+                    <strong
+                      >Encapsulate Components with
+                      <code>Shadow DOM</code></strong
+                    >:
+                    <ul>
+                      <li>Creates an isolated DOM tree within an element.</li>
+                      <li>Keeps styles and scripts scoped to the component.</li>
+                      <li>
+                        <strong>Example</strong>:
+                        <code>
+                          const shadowHost
+                          =document.querySelector("#shadow-host"); <br />
+                          const shadowRoot= shadowHost.attachShadow({ mode:
+                          "open" });<br />
+                          shadowRoot.innerHTML = `Inside Shadow DOM`;<br />
+                        </code>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <strong>Scoped Styling in <code>Shadow DOM</code></strong
+                    >:
+                    <ul>
+                      <li>
+                        Styles defined inside the Shadow DOM do not affect the
+                        main document.
+                      </li>
+                      <li>Prevents conflicts with global styles.</li>
+                      <li>
+                        <strong>Example</strong>:
+                        <code>
+                          shadowRoot.innerHTML = `Styled inside Shadow DOM`;
+                        </code>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <strong
+                      >Use <code>mode: "open"</code> or
+                      <code>mode: "closed"</code></strong
+                    >:
+                    <ul>
+                      <li>
+                        <code>open</code>: Allows JavaScript to access the
+                        Shadow DOM.
+                      </li>
+                      <li>
+                        <code>closed</code>: Prevents external access to the
+                        Shadow DOM.
+                      </li>
+                      <li>
+                        <strong>Example</strong>:
+                        <code>
+                          const closedShadow = element.attachShadow({ mode:
+                          "closed" }); console.log(element.shadowRoot); // null
+                        </code>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </details>
+          <details>
+            <summary>
+              Using <code>&lt;template&gt;</code> for Reusable Content
+            </summary>
+            <ul>
+              <li>
+                <strong>Overview</strong>: The
+                <code>&lt;template&gt;</code> element is used to define reusable
+                chunks of HTML that are not rendered until they are explicitly
+                used via JavaScript.
+              </li>
+
+              <ul>
+                <li>
+                  Content inside a template is not rendered until it is cloned
+                  and added to the DOM.
+                </li>
+                <li>
+                  Helps improve performance by reducing unnecessary DOM elements
+                  at page load.
+                </li>
+                <li>
+                  Commonly used for dynamically inserting UI components, such as
+                  cards, modals, or lists.
+                </li>
+              </ul>
+
+              <li>
+                <strong>Explanation</strong>:
+                <ul>
+                  <li>
+                    <strong>Define Reusable HTML Structures</strong>:
+                    <ul>
+                      <li>
+                        Use template for elements that need to be inserted
+                        multiple times dynamically.
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <strong>Use JavaScript to Clone and Append Content</strong>:
+                    <ul>
+                      <li>
+                        Content inside template is inactive and must be cloned
+                        before adding to the DOM.
+                      </li>
+                      <li>
+                        <strong>Example</strong>:
+
+                        <code
+                          ><br />
+                          &lt;template id="user-card"&gt; <br />
+                          &lt;div class="card"&gt; <br />
+                          &lt;h2&gt;User Name&lt;/h2&gt; <br />
+                          &lt;p&gt;User details go here.&lt;/p&gt; <br />
+                          &lt;/div&gt; <br />
+                          &lt;/template&gt; <br />
+
+                          &lt;script&gt; <br />
+                          document.addEventListener("DOMContentLoaded", () =&gt;
+                          { <br />
+                          const template = document.getElementById('user-card');
+                          <br />
+                          const clone = template.content.cloneNode(true);<br />
+                          document.body.appendChild(clone);<br />
+                          });<br />
+                          &lt;/script&gt;<br />
+                        </code>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <strong>Ensure the Template is Hidden by Default</strong>:
+                    <ul>
+                      <li>
+                        Unlike div or span, the content inside template does not
+                        render immediately.
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <strong>Use Templates for Dynamic Lists</strong>:
+                    <ul>
+                      <li>
+                        Useful for generating multiple elements, such as
+                        dynamically created lists or UI components.
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </details>
         </div>
-        <div>
-            <h2>Assignments</h2>
-            <details>
-                <summary onclick="showContent(event)">Likhith Reddy Gade</summary>
-                <iframe data-src="./likhith-reddy-gade.html"></iframe>
-            </details>
-            <details>
-                <summary onclick="showContent(event)">U Sainath Rao</summary>
-                <iframe data-src="./u-sainath-rao.html"></iframe>
-            </details>
-            <details>
-                <summary onclick="showContent(event)">Prem Rajput</summary>
-                <iframe data-src="./prem-rajput.html"></iframe>
-            </details>
-            <details>
-                <summary onclick="showContent(event)">Tarun Sharma</summary>
-                <iframe data-src="./tarun-sharma.html"></iframe>
-            </details>
-            <details>
-                <summary onclick="showContent(event)">Rohith Kotipalli</summary>
-                <iframe data-src="./rohith-kotipalli.html"></iframe>
-            </details>
-            <details>
-                <summary onclick="showContent(event)">Poornima Ranguri</summary>
-                <iframe data-src="./poornima-ranguri.html"></iframe>
-            </details>
-            <details>
-                <summary onclick="showContent(event)">Anusree Vutlapalli</summary>
-                <iframe data-src="./anusree-vutlapalli.html"></iframe>
-            </details>
-            <details>
-                <summary onclick="showContent(event)">Madhuri Udathu</summary>
-                <iframe data-src="./madhuri-udathu.html"></iframe>
-            </details>
-            <details>
-                <summary onclick="showContent(event)">Pranathi Akula</summary>
-                <iframe data-src="./pranathi-akula.html"></iframe>
-            </details>
-            <details>
-                <summary onclick="showContent(event)">Preeti Patil SN</summary>
-                <iframe data-src="./preeti-patil-sn.html"></iframe>
-            </details>
-            <details>
-                <summary onclick="showContent(event)">Rakshita R</summary>
-                <iframe data-src="./rakshita-r.html"></iframe>
-            </details>
-            <details>
-                <summary onclick="showContent(event)">Vinod Mudavath</summary>
-                <iframe data-src="./vinod-mudavath.html"></iframe>
-            </details>
-            <details>
-                <summary onclick="showContent(event)">Ram Karthik</summary>
-                <iframe data-src="./ram-karthik.html"></iframe>
-            </details>
-            <details>
-                <summary onclick="showContent(event)">Nishma Medagoni</summary>
-                <iframe data-src="./nishma-medagoni.html"></iframe>
-            </details>
-            <details>
-                <summary onclick="showContent(event)">Mohammed Abdul Awaiz</summary>
-                <iframe data-src="./mohammed-abdul-awaiz.html"></iframe>
-            </details>
+      </div>
+      <div class="header">
+        <div class="assignments">
+          <h2>Iframes, Shadow root and Templates</h2>
+          <ul>
+            <li>
+              Embed a YouTube video and a map into a webpage using iframes.
+            </li>
+            <li>
+              Create a custom component using Shadow DOM and
+              <code>&lt;template&gt;</code>.
+            </li>
+          </ul>
         </div>
+      </div>
+      <div>
+        <h2>Assignments</h2>
+        <details>
+          <summary onclick="showContent(event)">Likhith Reddy Gade</summary>
+          <iframe data-src="./likhith-reddy-gade.html"></iframe>
+        </details>
+        <details>
+          <summary onclick="showContent(event)">U Sainath Rao</summary>
+          <iframe data-src="./u-sainath-rao.html"></iframe>
+        </details>
+        <details>
+          <summary onclick="showContent(event)">Prem Rajput</summary>
+          <iframe data-src="./prem-rajput.html"></iframe>
+        </details>
+        <details>
+          <summary onclick="showContent(event)">Tarun Sharma</summary>
+          <iframe data-src="./tarun-sharma.html"></iframe>
+        </details>
+        <details>
+          <summary onclick="showContent(event)">Rohith Kotipalli</summary>
+          <iframe data-src="./rohith-kotipalli.html"></iframe>
+        </details>
+        <details>
+          <summary onclick="showContent(event)">Poornima Ranguri</summary>
+          <iframe data-src="./poornima-ranguri.html"></iframe>
+        </details>
+        <details>
+          <summary onclick="showContent(event)">Anusree Vutlapalli</summary>
+          <iframe data-src="./anusree-vutlapalli.html"></iframe>
+        </details>
+        <details>
+          <summary onclick="showContent(event)">Madhuri Udathu</summary>
+          <iframe data-src="./madhuri-udathu.html"></iframe>
+        </details>
+        <details>
+          <summary onclick="showContent(event)">Pranathi Akula</summary>
+          <iframe data-src="./pranathi-akula.html"></iframe>
+        </details>
+        <details>
+          <summary onclick="showContent(event)">Preeti Patil SN</summary>
+          <iframe data-src="./preeti-patil-sn.html"></iframe>
+        </details>
+        <details>
+          <summary onclick="showContent(event)">Rakshita R</summary>
+          <iframe data-src="./rakshita-r.html"></iframe>
+        </details>
+        <details>
+          <summary onclick="showContent(event)">Vinod Mudavath</summary>
+          <iframe data-src="./vinod-mudavath.html"></iframe>
+        </details>
+        <details>
+          <summary onclick="showContent(event)">Ram Karthik</summary>
+          <iframe data-src="./ram-karthik.html"></iframe>
+        </details>
+        <details>
+          <summary onclick="showContent(event)">Nishma Medagoni</summary>
+          <iframe data-src="./nishma-medagoni.html"></iframe>
+        </details>
+        <details>
+          <summary onclick="showContent(event)">Mohammed Abdul Awaiz</summary>
+          <iframe data-src="./mohammed-abdul-awaiz.html"></iframe>
+        </details>
+      </div>
     </div>
     <footer>
-        <p>&copy; 2024 HTML Training Program</p>
+      <p>&copy; 2024 HTML Training Program</p>
     </footer>
     <script type="text/javascript">
-        // Function to display the selected content
-        function showContent(event) {
-            const iframes = document.getElementsByTagName('iframe');
-            Array.from(iframes).forEach(iframe => {
-                iframe.src = '';
-            });
-            event.target.nextElementSibling.src = event.target.nextElementSibling.dataset.src;
-        }
+      // Function to display the selected content
+      function showContent(event) {
+        const iframes = document.getElementsByTagName("iframe");
+        Array.from(iframes).forEach((iframe) => {
+          iframe.src = "";
+        });
+        event.target.nextElementSibling.src =
+          event.target.nextElementSibling.dataset.src;
+      }
     </script>
-</body>
+  </body>
 </html>
