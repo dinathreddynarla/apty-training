@@ -122,14 +122,18 @@
                 <details>
                     <summary>How CSS works with HTML</summary>
                     <div class="content">
-                        <p><strong>CSS works by selecting HTML elements and applying styles to them.</strong> The process involves
-                            defining rules that specify how the content in HTML should be displayed. Here's how it works step-by-step:
+                        <p><strong>CSS works by selecting HTML elements and applying styles to them.</strong> The
+                            process involves
+                            defining rules that specify how the content in HTML should be displayed. Here's how it works
+                            step-by-step:
                         </p>
-                
+
                         <ol>
-                            <li><strong>HTML Structure:</strong> HTML provides the content and structure of the web page (e.g.,
+                            <li><strong>HTML Structure:</strong> HTML provides the content and structure of the web page
+                                (e.g.,
                                 headings, paragraphs, images, etc.).</li>
-                            <li><strong>CSS Selectors:</strong> In CSS, you define rules using selectors to target specific HTML
+                            <li><strong>CSS Selectors:</strong> In CSS, you define rules using selectors to target
+                                specific HTML
                                 elements. These selectors can be based on:
                                 <ul>
                                     <li><strong>Element type:</strong> (e.g., <code>p</code>, <code>h1</code>)</li>
@@ -137,19 +141,26 @@
                                     <li><strong>ID:</strong> (e.g., <code>#id-name</code>)</li>
                                 </ul>
                             </li>
-                            <li><strong>CSS Properties:</strong> After selecting an element, CSS defines the properties (such as
+                            <li><strong>CSS Properties:</strong> After selecting an element, CSS defines the properties
+                                (such as
                                 <code>color</code>, <code>font-size</code>, <code>margin</code>, <code>padding</code>,
-                                <code>background</code>, etc.) that determine how the element should be displayed.</li>
-                            <li><strong>Cascading:</strong> The "Cascading" part means that CSS rules can overlap. If multiple rules
+                                <code>background</code>, etc.) that determine how the element should be displayed.
+                            </li>
+                            <li><strong>Cascading:</strong> The "Cascading" part means that CSS rules can overlap. If
+                                multiple rules
                                 apply to the same element, the browser decides which one to apply based on:
                                 <ul>
-                                    <li><strong>Specificity:</strong> More specific selectors take precedence over general ones.</li>
-                                    <li><strong>Source order:</strong> If two rules have the same specificity, the one that appears last
+                                    <li><strong>Specificity:</strong> More specific selectors take precedence over
+                                        general ones.</li>
+                                    <li><strong>Source order:</strong> If two rules have the same specificity, the one
+                                        that appears last
                                         in the CSS file will be applied.</li>
                                 </ul>
                             </li>
-                            <li><strong>Rendering:</strong> The browser interprets the HTML and CSS, combining them to render the styled
-                                content on the screen. The result is the visually styled page that the user interacts with.</li>
+                            <li><strong>Rendering:</strong> The browser interprets the HTML and CSS, combining them to
+                                render the styled
+                                content on the screen. The result is the visually styled page that the user interacts
+                                with.</li>
                         </ol>
                     </div>
                 </details>
@@ -390,7 +401,8 @@
                 <h3>Basic Styling</h3>
                 <details>
                     <summary>Styling text: <code>color</code>, <code>font-family</code>, <code>font-size</code>,
-                        <code>font-weight</code> etc..</summary>
+                        <code>font-weight</code> etc..
+                    </summary>
                     <div class="content">
                         <p><strong>1. Color:</strong> The <code>color</code> property sets the color of the text.</p>
                         <pre><code>p { color: red; }</code></pre>
@@ -426,7 +438,8 @@
                             space between characters.</p>
                         <pre><code>p { letter-spacing: 2px; }</code></pre>
                         <p>This will add 2 pixels of space between each character in the text inside
-                            <code>&lt;p&gt;</code> elements.</p>
+                            <code>&lt;p&gt;</code> elements.
+                        </p>
 
                         <p><strong>8. Line-height:</strong> The <code>line-height</code> property controls the amount of
                             space between lines of text.</p>
@@ -443,65 +456,88 @@
                             decoration to the text, like underline, line-through, or overline.</p>
                         <pre><code>p { text-decoration: underline; }</code></pre>
                         <p>This will underline the text inside all <code>&lt;p&gt;</code> elements.</p>
-                        <p><strong>11. Text-direction:</strong> The <code>direction</code> property sets the direction of text within an
-                            element. It is commonly used for handling text in languages that are written from right to left (like Arabic or
+                        <p><strong>11. Text-direction:</strong> The <code>direction</code> property sets the direction
+                            of text within an
+                            element. It is commonly used for handling text in languages that are written from right to
+                            left (like Arabic or
                             Hebrew).</p>
                         <pre><code>p { direction: rtl; }</code></pre>
-                        <p>This will set the text direction to right-to-left (rtl) for all <code>&lt;p&gt;</code> elements. By default, text
+                        <p>This will set the text direction to right-to-left (rtl) for all <code>&lt;p&gt;</code>
+                            elements. By default, text
                             flows left-to-right (ltr) in most languages.</p>
-                        
-                        <p><strong>12. Text-shadow:</strong> The <code>text-shadow</code> property adds shadow effects to text, making it stand
+
+                        <p><strong>12. Text-shadow:</strong> The <code>text-shadow</code> property adds shadow effects
+                            to text, making it stand
                             out and adding depth to the text.</p>
                         <pre><code>p { text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); }</code></pre>
-                        <p>This will apply a shadow to the text inside all <code>&lt;p&gt;</code> elements, with a 2px horizontal and 2px
+                        <p>This will apply a shadow to the text inside all <code>&lt;p&gt;</code> elements, with a 2px
+                            horizontal and 2px
                             vertical offset, a 4px blur radius, and a semi-transparent black color.</p>
 
                     </div>
                 </details>
 
                 <details>
-                    <summary>Styling background: <code>background-color</code>, <code>background-image</code> etc...</summary>
+                    <summary>Styling background: <code>background-color</code>, <code>background-image</code> etc...
+                    </summary>
                     <div class="content">
-                        <p><strong>1. Background-color:</strong> The <code>background-color</code> property sets the background color of
+                        <p><strong>1. Background-color:</strong> The <code>background-color</code> property sets the
+                            background color of
                             an element.</p>
                         <pre><code>div { background-color: lightblue; }</code></pre>
-                        <p>This will set the background color of all <code>&lt;div&gt;</code> elements to light blue.</p>
-                
-                        <p><strong>2. Background-image:</strong> The <code>background-image</code> property allows you to set an image
+                        <p>This will set the background color of all <code>&lt;div&gt;</code> elements to light blue.
+                        </p>
+
+                        <p><strong>2. Background-image:</strong> The <code>background-image</code> property allows you
+                            to set an image
                             as the background.</p>
                         <pre><code>div { background-image: url('background.jpg'); }</code></pre>
-                        <p>This will set the background image of all <code>&lt;div&gt;</code> elements to the image located at
+                        <p>This will set the background image of all <code>&lt;div&gt;</code> elements to the image
+                            located at
                             'background.jpg'.</p>
-                
-                        <p><strong>3. Background-position:</strong> The <code>background-position</code> property defines the position
+
+                        <p><strong>3. Background-position:</strong> The <code>background-position</code> property
+                            defines the position
                             of the background image.</p>
                         <pre><code>div { background-position: center center; }</code></pre>
-                        <p>This will position the background image at the center of the <code>&lt;div&gt;</code> element.</p>
-                        <p>You can also use values like <code>top</code>, <code>bottom</code>, <code>left</code>, <code>right</code>, or
+                        <p>This will position the background image at the center of the <code>&lt;div&gt;</code>
+                            element.</p>
+                        <p>You can also use values like <code>top</code>, <code>bottom</code>, <code>left</code>,
+                            <code>right</code>, or
                             percentages for precise positioning.</p>
-                
-                        <p><strong>4. Background-size:</strong> The <code>background-size</code> property specifies the size of the
+
+                        <p><strong>4. Background-size:</strong> The <code>background-size</code> property specifies the
+                            size of the
                             background image.</p>
                         <pre><code>div { background-size: cover; }</code></pre>
-                        <p>This will make the background image cover the entire <code>&lt;div&gt;</code> element while maintaining its
+                        <p>This will make the background image cover the entire <code>&lt;div&gt;</code> element while
+                            maintaining its
                             aspect ratio.</p>
-                        <p>Other values include <code>contain</code> to fit the image inside the element without cropping it.</p>
-                
-                        <p><strong>5. Background-repeat:</strong> The <code>background-repeat</code> property defines whether and how
+                        <p>Other values include <code>contain</code> to fit the image inside the element without
+                            cropping it.</p>
+
+                        <p><strong>5. Background-repeat:</strong> The <code>background-repeat</code> property defines
+                            whether and how
                             the background image repeats.</p>
                         <pre><code>div { background-repeat: no-repeat; }</code></pre>
-                        <p>This will prevent the background image from repeating inside the <code>&lt;div&gt;</code> element.</p>
-                        <p>Other values include <code>repeat</code> (default), <code>repeat-x</code> (repeats horizontally), and
-                            <code>repeat-y</code> (repeats vertically).</p>
-                
-                        <p><strong>6. Background-attachment:</strong> The <code>background-attachment</code> property controls whether
+                        <p>This will prevent the background image from repeating inside the <code>&lt;div&gt;</code>
+                            element.</p>
+                        <p>Other values include <code>repeat</code> (default), <code>repeat-x</code> (repeats
+                            horizontally), and
+                            <code>repeat-y</code> (repeats vertically).
+                        </p>
+
+                        <p><strong>6. Background-attachment:</strong> The <code>background-attachment</code> property
+                            controls whether
                             the background image scrolls with the page or stays fixed in place.</p>
                         <pre><code>div { background-attachment: fixed; }</code></pre>
                         <p>This will keep the background image fixed in place when scrolling the page.</p>
-                        <p>Other values include <code>scroll</code> (default, the image scrolls with the content) and <code>local</code>
+                        <p>Other values include <code>scroll</code> (default, the image scrolls with the content) and
+                            <code>local</code>
                             (the image scrolls with the content inside the element).</p>
-                
-                        <p><strong>7. Background (Shorthand):</strong> The <code>background</code> property is a shorthand that allows
+
+                        <p><strong>7. Background (Shorthand):</strong> The <code>background</code> property is a
+                            shorthand that allows
                             you to set multiple background properties in one line.</p>
                         <pre><code>div { background: lightblue url('background.jpg') no-repeat center center / cover fixed; }</code></pre>
                         <p>This combines the following properties:
@@ -522,7 +558,8 @@
                     <div class="content">
                         <p>The Box Model in CSS refers to the structure of an element and how content, padding, border,
                             and margin work together:</p>
-                        <p>The Box Model is crucial for understanding how elements occupy space on a webpage. It consists of the
+                        <p>The Box Model is crucial for understanding how elements occupy space on a webpage. It
+                            consists of the
                             following parts:</p>
                         <ul>
                             <li><strong>Content</strong></li>
@@ -531,27 +568,28 @@
                             <li><strong>Margin</strong></li>
                         </ul>
                         <h4>Box Model Layout</h4>
-                        <img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/CSS-Box-Model.png" width="350px"
-                            alt="Visual representation of the CSS box model" />
-                        <p>The image above shows how the padding, border, and margin affect an element's total size and layout.</p>
-                
+                        <img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/CSS-Box-Model.png"
+                            width="350px" alt="Visual representation of the CSS box model" />
+                        <p>The image above shows how the padding, border, and margin affect an element's total size and
+                            layout.</p>
+
                         <p><strong>1. Content:</strong> The actual content of the element, where text or other content
                             appears.</p>
                         <pre><code>div { width: 200px; height: 100px; }</code></pre>
                         <p>The content area can have defined width and height, and it is where the content of the
                             element, like text or images, is placed.</p>
-                
+
                         <p><strong>2. Padding:</strong> Padding is the space between the content and the border of the
                             element. It is used to create space inside the element.</p>
                         <pre><code>div { padding: 20px; }</code></pre>
                         <p>This will create a 20-pixel space inside the <code>&lt;div&gt;</code> element between its
                             content and the border.</p>
-                
+
                         <p><strong>3. Border:</strong> The border wraps around the content and padding. You can set its
                             thickness, style, and color.</p>
                         <pre><code>div { border: 2px solid black; }</code></pre>
                         <p>This will add a 2-pixel black border around the <code>&lt;div&gt;</code> element.</p>
-                
+
                         <p><strong>4. Margin:</strong> Margin is the space outside the element, between the element's
                             border and other elements.</p>
                         <pre><code>div { margin: 10px; }</code></pre>
@@ -561,10 +599,222 @@
             </div>
             <div class="assignments">
                 <h2>Assignments</h2>
-                <ul>
-                    <li>Style a simple webpage with a header, a paragraph, and an image.</li>
-                    <li>Apply different background colors, text styling, and box model properties.</li>
-                </ul>
+                <details>
+                    <summary>CSS Fundamentals: Styling Text, Lists, and Images</summary>
+                    <div class="content">
+                        <h2>Objective:</h2>
+                        <p>Create a basic webpage that uses HTML and CSS. The page will include a heading, a paragraph,
+                            a list, and an image, styled using inline, internal, and external CSS, along with various
+                            CSS selectors.</p>
+
+                        <h2>Requirements:</h2>
+                        <ul>
+                            <li><strong>HTML Structure:</strong>
+                                <ul>
+                                    <li>Create a simple webpage with a heading (<code>&lt;h1&gt;</code>), a paragraph
+                                        (<code>&lt;p&gt;</code>), an unordered list (<code>&lt;ul&gt;</code>), and an
+                                        image (<code>&lt;img&gt;</code>).</li>
+                                    <li>Use an <code>id</code> for the heading and a <code>class</code> for the
+                                        container <code>div</code>.</li>
+                                </ul>
+                            </li>
+
+                            <li><strong>CSS Styling:</strong>
+                                <ul>
+                                    <li><strong>Inline CSS:</strong> Style one list item (<code>&lt;li&gt;</code>) to
+                                        change its color to blue.</li>
+                                    <li><strong>Internal CSS:</strong>
+                                        <ul>
+                                            <li>Set the background color of the page.</li>
+                                            <li>Change the font size of the paragraph.</li>
+                                            <li>Style the image to have a maximum width of 100% and auto height for
+                                                responsive design.</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>External CSS:</strong>
+                                        <ul>
+                                            <li>Set the font size and color for the heading.</li>
+                                            <li>Style the list items to have a different color.</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li><strong>Selectors:</strong>
+                                <ul>
+                                    <li>Use an <strong>element selector</strong> for the paragraph
+                                        (<code>&lt;p&gt;</code>).</li>
+                                    <li>Use a <strong>class selector</strong> for the container <code>div</code>.</li>
+                                    <li>Use an <strong>ID selector</strong> for the heading (<code>&lt;h1&gt;</code>).
+                                    </li>
+                                    <li>Use the <strong>universal selector</strong> to remove margins/paddings.</li>
+                                    <li>Style the image using a CSS selector (could be class or element selector).</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </details>
+                <details>
+                    <summary>Recipe Page Design with HTML and CSS</summary>
+                    <div class="content">
+                        <p><strong>Objective:</strong> Create a visually appealing recipe page for a fictional dish. Use
+                            HTML and CSS to
+                            design the page with multiple sections such as the recipe name, ingredients, preparation
+                            steps, and an image
+                            of the dish. You will use background colors, text styling, and images to enhance the visual
+                            appeal of the
+                            page.</p>
+
+                        <h2>Requirements:</h2>
+                        <ul>
+                            <li><strong>HTML Structure:</strong> Create a page that includes the following sections:
+                                <ul>
+                                    <li><strong>Recipe Name:</strong> A heading that includes the name of the recipe
+                                        (e.g., "Delicious
+                                        Chocolate Cake").</li>
+                                    <li><strong>Ingredients:</strong> A list of ingredients required for the recipe (use
+                                        an unordered
+                                        list <code>&lt;ul&gt;</code>).</li>
+                                    <li><strong>Preparation Steps:</strong> Numbered steps to explain how to make the
+                                        recipe (use an
+                                        ordered list <code>&lt;ol&gt;</code>).</li>
+                                    <li><strong>Image:</strong> An image of the dish you are showcasing. Include an
+                                        image and provide a
+                                        caption below it (use <code>&lt;img&gt;</code> and <code>&lt;p&gt;</code> for
+                                        the caption).</li>
+                                </ul>
+                            </li>
+                            <li><strong>CSS Styling:</strong> Apply the following styles using internal CSS:
+                                <ul>
+                                    <li><strong>Background Colors:</strong> Set different background colors for each
+                                        section (e.g.,
+                                        Recipe Name, Ingredients, Preparation Steps, Image Section).</li>
+                                    <li><strong>Text Styling:</strong>
+                                        <ul>
+                                            <li>Use large, bold font for the Recipe Name.</li>
+                                            <li>Style the ingredients and steps with different font sizes and line
+                                                heights for
+                                                readability.</li>
+                                            <li>Make the Preparation Steps list numbered (<code>&lt;ol&gt;</code>).</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Image:</strong> Style the image to be responsive so it fits well on
+                                        different screen
+                                        sizes. Add a caption below the image in italics.</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <h2>Section Breakdown:</h2>
+                        <ul>
+                            <li><strong>Recipe Name:</strong> Use a bold background color (e.g., red or orange) and
+                                display the recipe
+                                name in a large, bold font.</li>
+                            <li><strong>Ingredients:</strong> Use a soft background color (e.g., light green) and list
+                                the ingredients
+                                with bullet points.</li>
+                            <li><strong>Preparation Steps:</strong> Use a light background color (e.g., yellow or beige)
+                                and display the
+                                preparation steps in a numbered list.</li>
+                            <li><strong>Image Section:</strong> Use a clean background color (e.g., light gray or white)
+                                to showcase the
+                                image. Add a caption in italics under the image.</li>
+                        </ul>
+
+                        <h2>Additional Notes:</h2>
+                        <ul>
+                            <li>Ensure the page is mobile-friendly and looks good on different screen sizes (use
+                                responsive design
+                                techniques like percentage-based widths for images and text containers).</li>
+                            <li>Feel free to be creative with your design, but make sure the page is organized and easy
+                                to read.</li>
+                            <li>Use CSS selectors for styling specific elements (like background color, text styling,
+                                and image
+                                handling). Try to use element, class, and ID selectors where appropriate.</li>
+                        </ul>
+
+                        <h2>Evaluation Criteria:</h2>
+                        <ul>
+                            <li>Proper structure of HTML with all required sections.</li>
+                            <li>Correct application of background colors and text styling.</li>
+                            <li>Responsive design for the image and overall page.</li>
+                            <li>Use of appropriate CSS selectors for styling the page.</li>
+                        </ul>
+                    </div>
+                </details>
+                <details>
+                    <summary>Team Member Gallery with CSS Box Model</summary>
+                    <div class="content">
+                        <h2>Objective:</h2>
+                        <p>Create a responsive <strong>team member gallery</strong> using the <strong>CSS Box
+                                Model</strong>. Each
+                            profile card will include a <strong>profile picture</strong>, <strong>name</strong>,
+                            <strong>position</strong>, <strong>bio</strong>, and <strong>contact info</strong>. Both the
+                            <strong>outer
+                                container</strong> and the profile cards should follow the <strong>Box Model</strong>
+                            for layout
+                            control.
+                        </p>
+
+                        <h2>Requirements:</h2>
+                        <ol>
+                            <li><strong>HTML Structure:</strong>
+                                <ul>
+                                    <li>Use a <strong>parent container</strong> to hold multiple <strong>profile
+                                            cards</strong>.</li>
+                                    <li>Each card should contain:
+                                        <ul>
+                                            <li>Profile picture</li>
+                                            <li>Name</li>
+                                            <li>Position</li>
+                                            <li>Short bio</li>
+                                            <li>Contact info (email and phone)</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li><strong>CSS Box Model:</strong>
+                                <ul>
+                                    <li><strong>Outer container</strong>: Apply <strong>padding</strong>,
+                                        <strong>margins</strong>, and
+                                        <strong>borders</strong>.
+                                    </li>
+                                    <li><strong>Profile cards</strong>: Use <strong>padding</strong>,
+                                        <strong>margins</strong>, and
+                                        <strong>borders</strong> within each card.
+                                    </li>
+                                    <li>Don't use<strong>flexbox</strong> or <strong>CSS grid</strong>, use
+                                        <strong>Display</strong> properties for cards arrangement</li>
+                                    <li>Apply a <strong>hover effect</strong> on profile cards (e.g., increase card size
+                                        or shadow).
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li><strong>Styling:</strong>
+                                <ul>
+                                    <li>Use <strong>background colors</strong> for the cards and container.</li>
+                                    <li>Apply <strong>box-shadow</strong> to the cards for visual appeal.</li>
+                                </ul>
+                            </li>
+                        </ol>
+
+                        <h2>Example Data (For one profile card):</h2>
+                        <ul>
+                            <li><strong>Name:</strong> John Doe</li>
+                            <li><strong>Position:</strong> Front-End Developer</li>
+                            <li><strong>Bio:</strong> John builds dynamic web pages using JavaScript frameworks.</li>
+                            <li><strong>Contact:</strong> john.doe@example.com, +1234567890</li>
+                            <li><strong>Profile Picture:</strong> (Image URL or placeholder)</li>
+                        </ul>
+
+                        <h2>Submission:</h2>
+                        <p>Submit the <strong>HTML</strong> and <strong>CSS</strong> files with proper layout and
+                            styling. The page
+                            should be <strong>responsive</strong>, adjusting the layout for mobile and desktop.</p>
+                    </div>
+                </details>
             </div>
         </div>
         <div>
